@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { css, jsx } from '@emotion/core';
 import ButtonGroup from '../ButtonGroup/ButtonGroup';
 import Button from '../Button/Button';
-import { useTransition, animated } from 'react-spring';
+import { useTransition, animated } from '@react-spring/web';
 
 export type DialogProps = {
   visible: boolean;
@@ -30,13 +30,13 @@ const Dialog = ({
   onCancel,
   onConfirm
 }: DialogProps) => {
-  const fadeTransition = useTransition(visible, null, {
+  const fadeTransition = useTransition(visible, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 }
   });
 
-  const slideUpTransition = useTransition(visible, null, {
+  const slideUpTransition = useTransition(visible, {
     from: {
       transform: `translateY(200px) scale(0.8)`,
       opacity: 0

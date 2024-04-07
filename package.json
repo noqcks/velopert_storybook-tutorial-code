@@ -8,7 +8,7 @@
     "/dist"
   ],
   "dependencies": {
-    "react-spring": "^8.0.27"
+    "react-spring": "^9.7.3"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
